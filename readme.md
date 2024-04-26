@@ -7,6 +7,8 @@ Primeiramente, o Model é a camada que representa a lógica da aplicação, que 
 ## Figura 1: Arquitetura MVC
 <img src="./assets/MVCProject.png" alt="Arquitetura MVC" width="75%"/>
 <br>
+<a href="https://www.figma.com/file/6AUz2hstC2mqUE3F6AagAh/MVCProject?type=whiteboard&node-id=0%3A1&t=6qMOblp313ePnieX-1" target="">Link para leitura</a>
+<br>
 Primeiramente, temos a camada de Model que faz a comunicação com as tabelas do banco de dados, e na representação estão contido os atributos. "Mounter Teams Model" é a classe que faz a comunicação com a tabela "mounter_teams" do banco de dados, e tem os atributos: id, nome e descrição. Logo em seguida temos a "User Model" que faz a comunicação com a tabela "users" do banco de dados, e tem os atributos: id, nome, email, senha, regra (verifica se é administrador ou não) e mounterTeamId. Seguindo a mesma lógica, tem-se os models de Modelos (se é um notebook Dell Latitude 3540, por exemplo), os manuais (que são os manuais de montagem dos notebooks), as tarefas (que são as tarefas que os montadores devem fazer) e a tabela de favoritos (que é a tabela que armazena os favoritos dos montadores). Esses são os *models* que estão sendo utilizados e que fazem a comunicação com o banco de dados.
 <br><br>
 Partindo para o Controller, para cada respectivo model citado acima, levando em consideração que o controller vai pegar as informações e passar para a nossa terceira camada da aplicação que é a View. A view é a camada responsável por pegar as informações que o Controller pegou do Model e passar para o cliente (navegador) e então, a aplicação será renderizada.
